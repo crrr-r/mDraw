@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <swu.cr.mdraw.DrawView
+        android:id="@+id/drawView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/opration_con"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/brusSize"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="@color/teal_700"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/opration_con"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/l"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:tag="10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/xl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_brightness" />
+
+        <ImageView
+            android:id="@+id/xl"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:tag="20"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/xxl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/l"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_brightness" />
+
+        <ImageView
+            android:id="@+id/xxl"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:tag="30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/xxxl"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/xl"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_brightness" />
+
+        <ImageView
+            android:id="@+id/xxxl"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:tag="40"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/xxl"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_brightness" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/opration_con"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/pickImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/undo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/saveimage"
+            app:layout_constraintTop_toTopOf="@+id/saveimage"
+            app:srcCompat="@drawable/ic_baseline_photo_camera_24" />
+
+        <ImageView
+            android:id="@+id/saveimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/pickImage"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_share_24" />
+
+        <ImageView
+            android:id="@+id/eraser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/brush"
+            app:layout_constraintTop_toTopOf="@+id/brush"
+            app:srcCompat="@drawable/ic_paint" />
+
+        <ImageView
+            android:id="@+id/undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/brush"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/pickImage"
+            app:layout_constraintTop_toTopOf="@+id/pickImage"
+            app:srcCompat="@drawable/ic_undo" />
+
+        <ImageView
+            android:id="@+id/brush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/eraser"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/undo"
+            app:layout_constraintTop_toTopOf="@+id/undo"
+            app:srcCompat="@drawable/ic_brush" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/bule"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:tag="@color/blue"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/colors"
+        app:layout_constraintEnd_toEndOf="@+id/colors"
+        app:layout_constraintStart_toStartOf="@+id/colors"
+        app:layout_constraintTop_toTopOf="@+id/colors"
+        app:srcCompat="@drawable/ic_brightness"
+        app:tint="@color/blue" />
+
+    <ImageView
+        android:id="@+id/pink"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:tag="@color/pink"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/colors"
+        app:layout_constraintEnd_toEndOf="@+id/colors"
+        app:layout_constraintStart_toStartOf="@+id/colors"
+        app:layout_constraintTop_toTopOf="@+id/colors"
+        app:srcCompat="@drawable/ic_brightness"
+        app:tint="@color/pink" />
+
+    <ImageView
+        android:id="@+id/orange"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:tag="@color/orange"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/colors"
+        app:layout_constraintEnd_toEndOf="@+id/colors"
+        app:layout_constraintStart_toStartOf="@+id/colors"
+        app:layout_constraintTop_toTopOf="@+id/colors"
+        app:srcCompat="@drawable/ic_brightness"
+        app:tint="@color/orange" />
+
+    <ImageView
+        android:id="@+id/purple"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:tag="@color/white_purple"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/colors"
+        app:layout_constraintEnd_toEndOf="@+id/colors"
+        app:layout_constraintStart_toStartOf="@+id/colors"
+        app:layout_constraintTop_toTopOf="@+id/colors"
+        app:srcCompat="@drawable/ic_brightness"
+        app:tint="@color/white_purple" />
+
+    <ImageView
+        android:id="@+id/colors"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="#FFFFFFFF"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/brusSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_palette"
+        app:tint="@color/teal_200" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
